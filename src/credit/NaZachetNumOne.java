@@ -32,18 +32,18 @@ public class NaZachetNumOne {
     public static void doYouWant() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Do you want retry?: (Y/n)");
+        System.out.println("Вы хотите повторить?: (Д/н)");
         String answer = scanner.next();
-        String yes = "Y";
-        String no = "n";
+        String yes = "Д";
+        String no = "н";
 
         if (answer.equals(yes)) {
             proverkaRadiusaGo();
         } else {
             if (answer.equals(no)) {
-                System.out.println("Good bye!");
+                System.out.println("До свидания!");
             } else {
-                System.out.println("You entered the wrong letter! Retry the enter!");
+                System.out.println("Вы ввели неправильное значение! Пожалуйста, введите еще раз!");
                 doYouWant();
             }
         }
