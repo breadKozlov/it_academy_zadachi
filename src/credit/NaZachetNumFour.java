@@ -2,7 +2,7 @@ package credit;
 
 import java.util.Scanner;
 
-public class NaZachetNumChetire {
+public class NaZachetNumFour {
 
     public static void main(String[] args) {
 
