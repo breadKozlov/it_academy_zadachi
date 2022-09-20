@@ -28,7 +28,6 @@ public class NaZachetNumOne {
         doYouWant();
     }
 
-
     public static void doYouWant() {
 
         Scanner scanner = new Scanner(System.in);

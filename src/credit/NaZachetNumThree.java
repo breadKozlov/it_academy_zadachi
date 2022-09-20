@@ -4,7 +4,7 @@ public class NaZachetNumThree {
 
     public static void main(String[] args) {
 
-        int n = (int)(Math.random() * 28801);
+        int n = 7325;//(int)(Math.random() * 28801);
         Go(n);
     }
 
@@ -15,38 +15,41 @@ public class NaZachetNumThree {
         int min = overMin % 60;
         int hour = (overMin - min) / 60;
 
-        String chasov = okonchanieSlovChas(hour);
-        String minut = okonchanieSlov(min);
-        String secund = okonchanieSlov(sec);
-
         System.out.println();
         System.out.println("Vashe chislo: " + n);
         System.out.println();
-        printResult(hour,min,sec,chasov,minut,secund);
+        printResult(hour,min,sec);
         System.out.println();
         System.out.println("Udachi!");
     }
 
-    public static void printResult (int hour, int min, int sec, String ch, String m, String s) {
+    public static void printResult (int hour, int min, int sec) {
 
-        if (hour == 0 && sec == 0 && min == 0) {
-            System.out.println("Nichego ne ostalos, pora domoj");
-        } else if (hour == 0 && min == 0) {
-            System.out.println("Ostalos do konca rabochego dnja: " + ch + sec + " secund" + s);
-        } else if (hour == 0 && sec == 0) {
-            System.out.println("Ostalos do konca rabochego dnja: " + ch + min + " minut" + m);
-        } else if (min == 0 && sec == 0){
-            System.out.println("Ostalos do konca rabochego dnja: " + hour + ch);
-        } else if (hour == 0) {
-            System.out.println("Ostalos do konca rabochego dnja: " + ch + min + " minut" + m + ", " + sec
-                    + " secund" + s);
-        } else if (min == 0) {
-            System.out.println("Ostalos do konca rabochego dnja: " + hour + ch + ", " + sec + " secund" + s);
-        } else if (sec == 0) {
-            System.out.println("Ostalos do konca rabochego dnja: " + hour + ch + ", " + min + " minut" + m);
+        String okHour = okonchanieSlovChas(hour);
+        String okMin = okonchanieSlov(min);
+        String okSec = okonchanieSlov(sec);
+
+        String h = hour + okHour + ", ";
+        if (min == 0 && sec == 0) {
+            h = "Rovno: " + hour + okHour;
+        }
+        String printHour = (hour == 0) ? "Menee chasa ili - " : h;
+
+        String m = min + " minut" + okMin + ", ";
+        if (sec == 0) {
+            m = min + " minut" + okMin;
+        }
+        String printMin = (min == 0) ? "" : m;
+
+        String s = sec + " sekund" + okSec;
+        String printSec = (sec == 0) ? "" : s;
+
+        System.out.println("Do konca rabochego dnja ostalos:");
+        System.out.println();
+        if (hour == 0 && min == 0 && sec == 0) {
+            System.out.println("Nichego ne ostalos. Pora domoj");
         } else {
-            System.out.println("Ostalos do konca rabochego dnja: " + hour + ch + ", " + min + " minut" + m + ", "
-                    + sec + " secund" + s);
+            System.out.println(printHour + printMin + printSec);
         }
     }
 
@@ -76,13 +79,9 @@ public class NaZachetNumThree {
         switch (h) {
             case 1 -> chasov = " chas";
             case 2, 3, 4 -> chasov = " chasa";
-            default -> {
-                if (h == 0) {
-                    chasov = "menee chasa ili - ";
-                } else { chasov = " chasov";
-                }
+            default -> chasov = " chasov";
             }
-        }
+
         return chasov;
     }
 }
