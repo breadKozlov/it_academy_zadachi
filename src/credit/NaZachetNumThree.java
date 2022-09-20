@@ -4,7 +4,7 @@ public class NaZachetNumThree {
 
     public static void main(String[] args) {
 
-        int n = 7325;//(int)(Math.random() * 28801);
+        int n = (int)(Math.random() * 28801);
         Go(n);
     }
 
