@@ -5,10 +5,10 @@ public class NaZachetNumThree {
     public static void main(String[] args) {
 
         int n = (int)(Math.random() * 28801);
-        Go(n);
+        go(n);
     }
 
-    public static void Go(int n) {
+    public static void go(int n) {
 
         int sec = n % 60;
         int overMin = ((n - sec) / 60);
