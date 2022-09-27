@@ -21,11 +21,11 @@ public class NaOzcenkuNumOne {
             System.out.println();
             enterN();
         } else {
-            Go(n);
+            go(n);
         }
     }
 
-    public static void Go (int n) {
+    public static void go (int n) {
 
         int sec = n % 60;
         int overMin = ((n - sec) / 60);

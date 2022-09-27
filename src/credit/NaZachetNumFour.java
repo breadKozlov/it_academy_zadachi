@@ -11,10 +11,10 @@ public class NaZachetNumFour {
         int kolMash = scanner.nextInt();
         System.out.println();
 
-        Go(kolMash);
+        go(kolMash);
     }
 
-    public static void Go(int n) {
+    public static void go(int n) {
 
         int sumChisel = 0;
 
