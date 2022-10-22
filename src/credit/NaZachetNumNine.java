@@ -18,7 +18,7 @@ public class NaZachetNumNine {
         MultiVarka multiVar = new MultiVarka("Electrolux",750,true,68.5);
         MultiVarka multiVar1 = new MultiVarka("Bosh",569,78.7);
         Laptop lap = new Laptop("HP",1250,true,120.6);
-        Laptop lap1 = new Laptop("Dell", 1300,150.9);
+        Laptop lap1 = new Laptop("Dell",1300,150.9);
 
         HomeAppliances[] homeAppliances = {hol,hol1,micro,micro1,micro2,stir,stir1,tel,tel1,multiVar,multiVar1,lap,lap1};
 
