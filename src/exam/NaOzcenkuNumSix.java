@@ -19,7 +19,7 @@ public class NaOzcenkuNumSix {
         System.out.println("The last word after replaceLast - " + rep.last());
         System.out.println();
 
-        //отсебятин
+        //отсебятина
         Pair<String, String> prob = Pair.createNewPairWithTwoType("Hello,", "world!");
         System.out.println(prob.first() + " " + prob.last());
     }
