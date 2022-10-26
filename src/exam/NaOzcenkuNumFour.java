@@ -14,7 +14,8 @@ public class NaOzcenkuNumFour {
         Pattern pattern = Pattern.compile("[ ,.?!]+");
         String[] array = pattern.split(inputNoSpaceAndUpper);
 
-        int unique = 1; //последнее слово в массиве будет всегда уникальным
+        //proverka na pustoj vvod i vvod odnih znakov prepinanija
+        int unique = (array.length == 1 && array[0].equals("") || array.length == 0) ? 0 : 1;
 
         for (int i = 0; i < array.length - 1; i++) {
 
@@ -22,7 +23,7 @@ public class NaOzcenkuNumFour {
 
             for (int j = i + 1; j < array.length; j++) {
 
-                if (array[i].equals(array[j])) {
+                if (array[i].equals(array[j]) || array[i].equals("")) {
                     coincidence = true;
                     break;
                 }
