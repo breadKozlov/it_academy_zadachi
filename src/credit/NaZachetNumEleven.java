@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 
 public class NaZachetNumEleven {
 
-    public static final String IN_TEXT_FILE = "PracticeText.txt";
+    public static final String IN_TEXT_FILE = "PracticeText.txt"; //в репозиторий я его не закидывал, сам создастся
+
     public static void main(String[] args) {
 
         new NaZachetNumEleven().runner(IN_TEXT_FILE);
