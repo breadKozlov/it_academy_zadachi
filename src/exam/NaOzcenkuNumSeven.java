@@ -55,18 +55,17 @@ public class NaOzcenkuNumSeven {
     public static <K> Map<K, Integer> arrayToMap(K[] ks) {
 
         Map<K,Integer> mapKa = new HashMap<>();
+        mapKa.put(ks[0],1);
 
-        for (K k : ks) {
+        for (int i = 1; i < ks.length; i++) {
 
-            int coincidence = 0;
-
-            for (K value : ks) {
-
-                if (k.equals(value)) {
-                    coincidence++;
-                }
+            int coincidence = 1;
+            if (mapKa.containsKey(ks[i])) {
+                coincidence = mapKa.get(ks[i]);
+                mapKa.put(ks[i], ++coincidence);
+            } else {
+                mapKa.put(ks[i],coincidence);
             }
-            mapKa.put(k, coincidence);
         }
         return mapKa;
     }
